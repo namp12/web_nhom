@@ -12,51 +12,184 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="chaomung text-center py-2 border-bottom">
-        <h5>Chào Mừng Bạn Đến Với Shop Của Chúng Tôi!</h5> 
-    </div>
+  <header class="fixed-top bg-white shadow-sm">
     <div class="container">
-        <div class="header">
-        <!-- thanh điều hướng -->
-        <header class="d-flex justify-content-between align-items-center py-3">
-            <nav class="d-flex">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Trang Chủ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Sản Phẩm</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Liên Hệ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="#">Blog</a>
-                    </li>
-                </ul>
-            </nav>
-       
-        <!-- logo cho trang web -->
-        <div class="d-flex align-items-center mx-auto justify-content-center">
-            <h1 class="m-0">A.Thw</h1>
-        </div>
-
-        <!-- thẻ chọn logo -->
-        <div class="login d-flex align-items-center ms-auto">
+      <div class="row align-items-center py-3">
+        
+        <!-- Menu trái -->
+        <div class="col-4 d-flex justify-content-start">
+          <nav>
             <ul class="nav">
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-dark me-3"><i class="fa-solid fa-user"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link text-dark"><i class="fa-solid fa-cart-shopping"></i></a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Sản phẩm</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Điểm bán</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark" href="#">Blogs</a>
+              </li>
             </ul>
+          </nav>
         </div>
-
-    </header>
+  
+        <!-- Logo giữa -->
+        <div class="col-4 text-center">
+          <a href="/" id="logo" style="text-decoration: none; color: inherit;">
+            <h1 class="m-0" style="font-size: 28px;">A.Thw</h1>
+          </a>
+        </div>
+        
+  
+        <!-- Icon phải -->
+        <div class="col-4 d-flex justify-content-end">
+          <a href="#" class="text-dark me-3">
+            <i class="fa-solid fa-user fa-lg"></i>
+          </a>
+          <a href="#" class="text-dark">
+            <i class="fa-solid fa-bag-shopping fa-lg"></i>
+          </a>
+        </div>
+      </div>
     </div>
+  </header>
+
+    <div class="timkiem container">
+      <div class="row">
+        <div class="col-6 mx-auto">
+          <input type="text" class="forminput" id="id_input" placeholder="Tìm Kiếm Sữa......">
+        </div>
+      </div>
     </div>
 
-    <link rel="stylesheet" href="./bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js">
+    <section class="hero-banner">
+      <video autoplay muted loop playsinline class="background-video">
+        <source src="./img-video/videoplayback.mp4" type="video/mp4">
+        <div class="baner_content">
+          <h1>Sữa Tươi Nguyên Chất</h1>
+          <p>100% tự nhiên, tốt cho sức khỏe</p>
+          <a href="#all-products" class="btn btn-success">Mua ngay</a>
+        </div>
+      </video>
+    </section>
+
+
+    <section class="features-section text-center py-5">
+      <h2 class="section-title mb-5">Từ A.Thw tới gia đình bạn</h2>
+    
+      <div id="featuresCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
+      
+          <!-- Slide 1: 4 features -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-6 col-md-3 feature-item">
+                <img src="./img-video/1.png" alt="Không dầu cọ" class="feature-icon mb-2">
+                <p>Không dầu cọ</p>
+              </div>
+              <div class="col-6 col-md-3 feature-item">
+                <img src="./img-video/2.png" alt="Nguyên liệu thuần chay" class="feature-icon mb-2">
+                <p>Nguyên liệu thuần chay</p>
+              </div>
+              <div class="col-6 col-md-3 feature-item">
+                <img src="./img-video/4.png" alt="DHA gốc thực vật" class="feature-icon mb-2">
+                <p>DHA gốc thực vật</p>
+              </div>
+              <div class="col-6 col-md-3 feature-item">
+                <img src="./img-video/5.png" alt="Bò ăn cỏ" class="feature-icon mb-2">
+                <p>Bò ăn cỏ</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Slide 2: 4 features -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-6 col-md-3 feature-item">
+                <img src="./img-video/6.png" alt="Chất béo nguyên kem" class="feature-icon mb-2">
+                <p>Thương Hiệu Việt</p>
+              </div>
+              <div class="col-6 col-md-3 feature-item">
+                <i class="fa-solid fa-truck-fast fa-bounce fa-2xl feature-icon mb-2"></i>
+                <p>Free Ship</p>
+              </div>
+              <div class="col-6 col-md-3 feature-item">
+                <i class="fa-solid fa-box feature-icon mb-1 fa-2xl"></i>
+                <p>Hoàn trả hàng</p>
+              </div>
+              <div class="col-6 col-md-3 feature-item">
+                <i class="fa-solid fa-phone-volume feature-icon mb-2 fa-2xl"></i>
+                <p>Liên Hệ</p>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <img src="./img-video/logo.png" alt="logo công ty" class="footer-logo" />
+          <p>
+            A.THW là dòng sữa công thức hữu cơ cao cấp, được sản xuất hoàn toàn tại Việt Nam.
+            Nguyên liệu được tuyển chọn từ các trang trại sạch, tự nhiên trong nước, đảm bảo tiêu chuẩn an toàn và dinh dưỡng cho trẻ nhỏ.
+            Chúng tôi là một doanh nghiệp gia đình với hơn 60 năm kinh nghiệm trong lĩnh vực nghiên cứu và sản xuất sữa công thức, luôn cam kết mang đến những sản phẩm chất lượng, phù hợp với thể trạng và nhu cầu phát triển của trẻ em Việt Nam.
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-shopify"></i></a>
+            <a href="#"><i class="fas fa-book"></i></a>
+          </div>
+        </div>
+    
+        <div class="footer-links">
+          <h4>A.THW</h4>
+          <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Điểm bán</a></li>
+            <li><a href="#">Blogs</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-links">
+          <h4>MUA HÀNG TẠI</h4>
+          <ul>
+            <li><a href="#">Cửa hàng gần bạn</a></li>
+            <li><a href="#">Liên hệ trực tiếp</a></li>
+            <li><a href="#">Shopee Mall</a></li>
+            <li><a href="#">Tiktokshop Mall</a></li>
+            <li><a href="#">Lazada Mall</a></li>
+          </ul>
+        </div>
+      </div>
+    
+      <div class="footer-newsletter">
+        <p>Hỗ trợ tại đây</p>
+        <form>
+          <input type="email" placeholder="Email của bạn..." required />
+          <button type="submit">→</button>
+        </form>
+      </div>
+    
+      <div class="footer-bottom">
+        <p>
+          Cơ quan chủ quản: Công ty 3 thành viên A.THW <br />
+          Trụ sở: Đại học Đại Nam, Phú Lãm, Hà Đông, Hà Nội — Điện thoại: 086736243
+        </p>
+      </div>
+    </footer>
+    
+    
+    <script src="./js/main.js"></script>
+    <script src="./bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
