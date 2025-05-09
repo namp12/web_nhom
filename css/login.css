@@ -1,0 +1,123 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+}
+
+/* Card styles */
+.card {
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+/* Tab styles */
+.nav-tabs .nav-link {
+    color: #6c757d;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #0d6efd;
+}
+
+.nav-tabs .nav-link.active {
+    color: #0d6efd;
+    background: none;
+    font-weight: 600;
+}
+
+.nav-tabs .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0d6efd;
+    border-radius: 2px;
+}
+
+/* Form styles */
+.input-group-text {
+    border-radius: 8px 0 0 8px;
+    padding: 0.75rem 1rem;
+}
+
+.form-control {
+    border-radius: 0 8px 8px 0;
+    padding: 0.75rem 1rem;
+}
+
+.input-group:focus-within {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    border-radius: 8px;
+}
+
+.input-group:focus-within .input-group-text,
+.input-group:focus-within .form-control,
+.input-group:focus-within .btn-outline-secondary {
+    border-color: #86b7fe;
+}
+
+/* Button styles */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #0d6efd, #0b5ed7);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #0b5ed7, #0a58ca);
+    transform: translateY(-1px);
+}
+
+.btn-outline-danger:hover,
+.btn-outline-primary:hover {
+    transform: translateY(-1px);
+}
+
+/* Social login buttons */
+.btn-outline-danger,
+.btn-outline-primary {
+    padding: 0.75rem;
+}
+
+/* Checkbox styles */
+.form-check-input:checked {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Password toggle button */
+.btn-outline-secondary {
+    border-radius: 0 8px 8px 0;
+    border-color: #ced4da;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+    background-color: transparent;
+    color: #0d6efd;
+    border-color: #ced4da;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .nav-tabs .nav-link {
+        padding: 0.75rem;
+    }
+}

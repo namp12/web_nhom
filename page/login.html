@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - A.Thw Sữa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../bootstrap-5.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="bg-light">
+    <div class="container min-vh-100 d-flex align-items-center justify-content-center py-5">
+        <div class="card border-0 shadow-lg" style="max-width: 450px; width: 100%;">
+            <!-- Logo và Tiêu đề -->
+            <div class="card-header bg-white border-0 text-center pt-4 pb-2">
+                <a href="../index.html">
+                    <img src="../img-video/logo.png" alt="A.Thw Sữa Logo" class="mb-4" style="height: 60px;">
+                </a>
+                <h4 class="card-title mb-0 fw-bold">Chào mừng trở lại!</h4>
+                <p class="text-muted small">Đăng nhập để tiếp tục mua sắm</p>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="card-header bg-white border-0 pb-0">
+                <ul class="nav nav-tabs nav-fill border-0" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active fw-medium border-0" id="login-tab" data-bs-toggle="tab" data-bs-target="#login-pane" type="button" role="tab">Đăng nhập</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link fw-medium border-0" id="register-tab" data-bs-toggle="tab" data-bs-target="#register-pane" type="button" role="tab">Đăng ký</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card-body p-4">
+                <div class="tab-content">
+                    <!-- Form Đăng nhập -->
+                    <div class="tab-pane fade show active" id="login-pane" role="tabpanel">
+                        <form id="login-form">
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0">
+                                        <i class="fas fa-envelope text-primary"></i>
+                                    </span>
+                                    <input type="email" class="form-control border-start-0 ps-0" id="login-email" placeholder="Email của bạn" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0">
+                                        <i class="fas fa-lock text-primary"></i>
+                                    </span>
+                                    <input type="password" class="form-control border-start-0 ps-0" id="login-password" placeholder="Mật khẩu" required>
+                                    <button class="btn btn-outline-secondary border-start-0" type="button" id="toggle-password">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="remember-me">
+                                    <label class="form-check-label small" for="remember-me">Ghi nhớ tôi</label>
+                                </div>
+                                <a href="#" class="small text-primary text-decoration-none">Quên mật khẩu?</a>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 mb-3 py-2">Đăng nhập</button>
+                            
+                            <!-- Đăng nhập bằng mạng xã hội -->
+                            <div class="position-relative mb-3">
+                                <hr class="text-muted">
+                                <div class="position-absolute top-50 start-50 translate-middle bg-white px-3">
+                                    <span class="text-muted small">Hoặc đăng nhập với</span>
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2 mb-3">
+                                <button type="button" class="btn btn-outline-danger">
+                                    <i class="fab fa-google me-2"></i>Google
+                                </button>
+                                <button type="button" class="btn btn-outline-primary">
+                                    <i class="fab fa-facebook-f me-2"></i>Facebook
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Form Đăng ký -->
+                    <div class="tab-pane fade" id="register-pane" role="tabpanel">
+                        <form id="register-form">
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0">
+                                        <i class="fas fa-user text-primary"></i>
+                                    </span>
+                                    <input type="text" class="form-control border-start-0 ps-0" id="register-fullname" placeholder="Họ và tên" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0">
+                                        <i class="fas fa-envelope text-primary"></i>
+                                    </span>
+                                    <input type="email" class="form-control border-start-0 ps-0" id="register-email" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0">
+                                        <i class="fas fa-lock text-primary"></i>
+                                    </span>
+                                    <input type="password" class="form-control border-start-0 ps-0" id="register-password" placeholder="Mật khẩu" required>
+                                    <button class="btn btn-outline-secondary border-start-0" type="button">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white border-end-0">
+                                        <i class="fas fa-lock text-primary"></i>
+                                    </span>
+                                    <input type="password" class="form-control border-start-0 ps-0" id="register-confirm-password" placeholder="Xác nhận mật khẩu" required>
+                                    <button class="btn btn-outline-secondary border-start-0" type="button">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="agree-terms" required>
+                                    <label class="form-check-label small" for="agree-terms">
+                                        Tôi đồng ý với <a href="#" class="text-primary">Điều khoản dịch vụ</a> và <a href="#" class="text-primary">Chính sách bảo mật</a>
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 py-2">Đăng ký</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="card-footer bg-white border-0 text-center pb-4">
+                <a href="../index.html" class="text-muted text-decoration-none small">
+                    <i class="fas fa-arrow-left me-1"></i>Quay lại trang chủ
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

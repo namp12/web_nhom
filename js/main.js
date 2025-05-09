@@ -40,3 +40,20 @@ window.addEventListener('scroll', function() {
         $productSection.append('<p class="no-results text-center text-muted">Không tìm thấy sản phẩm nào.</p>');
     }
 });
+
+// chế độ dark mode
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+
+  // Lưu trạng thái vào localStorage để ghi nhớ
+  const isDark = document.body.classList.contains('dark-mode');
+  localStorage.setItem('darkMode', isDark ? 'true' : 'false');
+}
+
+// Khi tải trang, kiểm tra localStorage
+window.onload = function () {
+  const savedMode = localStorage.getItem('darkMode');
+  if (savedMode === 'true') {
+    document.body.classList.add('dark-mode');
+  }
+};
